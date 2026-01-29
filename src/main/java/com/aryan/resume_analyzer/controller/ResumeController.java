@@ -1,5 +1,7 @@
 package com.aryan.resume_analyzer.controller;
 
+import com.aryan.resume_analyzer.dto.ResumeResponse;
+import com.aryan.resume_analyzer.model.Resume;
 import com.aryan.resume_analyzer.model.User;
 import com.aryan.resume_analyzer.repository.UserRepository;
 import com.aryan.resume_analyzer.service.ResumeService;
@@ -17,8 +19,9 @@ public class ResumeController {
     private final UserRepository userRepository;
 
     @PostMapping("/upload")
-    public String uploadResume(
+    public ResumeResponse uploadResume(
             @RequestParam("file") MultipartFile file,
+            @RequestParam("jobDescription") String jobDescription,
             Authentication authentication) throws Exception {
 
         String email = authentication.getName();
@@ -26,7 +29,7 @@ public class ResumeController {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        resumeService.uploadResume(file, user);
-        return "Resume uploaded successfully";
+        return resumeService.uploadResume(file, user ,jobDescription);
+
     }
 }

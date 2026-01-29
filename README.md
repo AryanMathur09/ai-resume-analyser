@@ -1,7 +1,8 @@
 - AI Resume Analyzer
 
-An AI-powered Resume Analyzer built using Java 21 and Spring Boot that evaluates resumes against job descriptions, extracts skills, and provides ATS-style insights to help recruiters and candidates make better decisions.
- 
+An AI-powered Resume Analyzer built using Java 21 and Spring Boot.
+This project analyzes resumes against job descriptions using a rule-based AI engine with a pluggable architecture.
+The system is designed to support LLM-based analysis (OpenAI / Gemini) but currently uses a deterministic mock AI engine to ensure zero-cost, always-on deployment. 
 Project Status: Actively under development (Ongoing)
 
 - Problem Statement

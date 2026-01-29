@@ -29,6 +29,14 @@ public class Resume {
 
     private LocalDateTime uploadedAt;
 
+    @Lob
+    private String skillsFound;
+    @Lob
+    private String missingSkills;
+
+
+
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
