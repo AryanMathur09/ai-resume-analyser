@@ -1,15 +1,14 @@
 package com.aryan.resume_analyzer.service;
 
-import com.aryan.resume_analyzer.dto.ResumeAnalysisResult;
-import org.springframework.context.annotation.Primary;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import com.aryan.resume_analyzer.dto.ResumeAnalysisResult;
 
 
 @Service
-@Primary
 public class MockResumeAnalysisService implements ResumeAnalysisService {
 
     private static final List<String> COMMON_SKILLS = List.of(

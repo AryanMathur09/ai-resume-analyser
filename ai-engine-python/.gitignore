@@ -1,0 +1,16 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+* # Python
+**/venv/
+**/__pycache__/
+.env
+*.env
+
+# Java / Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+resume-analyzer-java/uploads/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
